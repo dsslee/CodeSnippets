@@ -29,7 +29,7 @@ $ touch file.txt
 $ cat file            # view single file
 $ cat file1 file2     # view multiple files
 $ cat -n file         # view contents of lines of a file
-$ tail file           # pritns las few lines of a file
+$ tail file           # prints last few lines of a file
 ```
 
 5. Remove file
@@ -55,7 +55,7 @@ $ rmdir -rf new_folder  # forcefully and recursively deletes directory along wit
 8. Copy and move file/directory
 ```bash
 $ cp file               # view single file
-$ mv file ../folder/.   # view single filemv
+$ mv file ../folder/.   # move single file
 $ mv file newname       # change filename
 ```
 
@@ -68,7 +68,6 @@ $ chmodp file           # view single file
 ```bash
 $ find /home/username/ -name "*.err"    # searches for *.err files in the /home/username/ directory and all sub-directories
 $ locate
-
 ```
 
 11. Compressing and extracting 
