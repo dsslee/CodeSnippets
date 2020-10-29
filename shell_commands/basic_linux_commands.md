@@ -9,6 +9,7 @@ $ pwd                 # current directory
 ```bash
 $ ls 
 $ ls -la              # includes hidden files and directories
+$ ls -R -F            # list every file and directory in the current level, then everything in each sub-directory
 ```
 
 3. Change directory 
@@ -24,13 +25,29 @@ $ cd folder2          # move to folder2
 $ touch file.txt
 ```
 
-5. Display file contents
+5. View file contents
 ```bash
-$ cat file            # view single file
-$ cat file1 file2     # view multiple files
-$ cat -n file         # view contents of lines of a file
-$ tail file           # prints last few lines of a file
+$ cat file              # view single file
+$ cat file1 file2       # view multiple files  
+$ cat -n file           # view contents of lines of a file
+$ tail file             # prints last few lines of a file
+$ less file1 file2      # view file contents piece by piece -> spacebar to page down, :n to go to next file, :q to quit
+$ head -n # file        # view # line of the file from the top
+$ tail -n # file        # view # line of the file from the bottom
+$ cut -f 1,7 -d , file  # select column from a file --> -f field, -d delimiter
 ```
+6. Searching
+```bash
+$ grep keyword file     # search for keyword
+$ grep
+```
+-c: print a count of matching lines rather than the lines themselves
+-h: do not print the names of files when searching multiple files
+-i: ignore case (e.g., treat "Regression" and "regression" as matches)
+-l: print the names of files that contain matches, not the matches
+-n: print line numbers for matching lines
+-v: invert the match, i.e., only show lines that don't match
+
 
 5. Remove file
 ```bash
@@ -85,5 +102,6 @@ $ tar -zxvf                         # extracting tar.gz
 12 . Other useful commands
 ```
 $ history n                         # n list of  commands
+$ man command                       # help command
 ```
 
