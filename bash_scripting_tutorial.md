@@ -4,7 +4,7 @@
 
 * 1. [Basics](#1-Basic)
 * 2. [Using Arrays](#2-Using-Arrays)
-* 3. [If statement](#3-If-statement)
+* 3. [If Statements](#3-If-statement)
 * 4. [For Loops](#4-For-Loops)
 
 ## 1. Basics
@@ -46,6 +46,10 @@ $ temp_c=$(cat temps/region_C)
 $ echo "The three temperatures were "$temp_a", "$temp_b", and "$temp_c""
 ```
 ## 2. Using Arrays
+declare array by either:
+- declare -a myarray
+- myarray=()
+
 ### 2.1 Arrays in an Array
 ```bash
 #===== METHOD 1 =====
@@ -91,6 +95,22 @@ region_temps+=("$average_temp")
 
 # Print out the whole array
 echo ${region_temps[@]}
+
+
+#===== Appending line from a file to an array =====
+# declare an array
+keywordlist=()
+
+# read file
+while IFS= read -r line || [[ "$line" ]]; do
+    keywordlist+=("$line")
+done < keyword.txt
+echo "Keywords: "${keywordlist[@]}""
+
+#print array element
+for item in ${keywordlist[*]}; do
+    echo $item
+done
 ```
 
 ### 2.2 Associative Array(Dictionarys)
