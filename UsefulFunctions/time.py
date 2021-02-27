@@ -57,3 +57,4 @@ def timerange(df, bins, labels):
     # check
     print('timerange dtype: ', df['timerange'].dtype)
     print('df shape: ', df.shape)
+    return df
