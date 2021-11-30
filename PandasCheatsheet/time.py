@@ -15,7 +15,7 @@ def create_time_features(df_input, time_col):
 
 def convert_unixtime(df_input, time_col):
 	df = df_input.copy()
-	pass
+	df[col] = pd.to_datetime(df['rt'], units='ms')
 	return df
 
 
